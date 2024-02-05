@@ -1,0 +1,179 @@
+:root {
+  --primary-color: #fff;
+  --secondary-color: #1e1e1e;
+
+  --primary-font: "Courier New", Courier, monospace;
+
+  --primary-font-size: 1rem; /* 16px norm when reading online */
+  --secondary-font-size: 1.5rem; /* 24px */
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--primary-font);
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+}
+
+h2 {
+  font-size: var(--secondary-font-size);
+}
+
+a,
+p,
+li {
+  font-size: var(--primary-font-size);
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+}
+
+header > .logo {
+  font-size: 2rem; /* 32px */
+}
+
+header > .logo:hover::after {
+  /* top left guy waves:) */
+  content: " + 👋 ";
+}
+
+header > nav {
+  width: 50%; /* Skills Contact */
+}
+
+header > nav > ul {
+  /* Skills Contact */
+  display: flex;
+  justify-content: space-around; /* gives space between skills and contact */
+}
+
+header > nav > ul > li {
+  border: 1px solid var(--primary-color);
+  border-radius: 1rem;
+  padding: 0.5rem;
+}
+
+header > nav > ul > li:hover,
+header > nav > ul > li:hover a {
+  background-color: var(--primary-color);
+  color: black;
+  cursor: pointer;
+}
+
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly; /* centers my image */
+  gap: 3rem; /* gap btw my image and below p */
+}
+
+.image-container {
+  width: 130px;
+  position: relative;
+}
+
+.image-container > img {
+  border-radius: 10%;
+  width: 120%;
+}
+
+.image-container > h2 {
+  width: 150px;
+  position: absolute; /* nearest position ancestor */
+  top: 59%; /* controls top of let me introduce myself */
+  left: 20%;
+}
+
+.image-container > h2 > span {
+  color: coral;
+}
+
+.text-container {
+  /* p below my image */
+  max-width: 450px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.text-container > ul > li {
+    margin: 1rem;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap; /* list of skills wrap as the window expands */
+    gap: 3rem; 
+    justify-content: center;
+}
+
+.skills-list > li {
+    width: 300px;
+    padding: 1rem;
+    background-color: #545454;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center; /* centers the skills set in the border */
+}
+
+form {
+    margin: 2rem;
+}
+
+input {
+    border-radius: 6px;
+    padding: 1rem;
+    margin-bottom: 2rem;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+}
+
+#skills > h2 {
+    margin-bottom: 1.5rem;
+}
+
+#skills > label > span {
+    font-size: var(--secondary-font-size);
+}
+
+.contact-container > div {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.cta {
+    padding: 1rem;
+    border: 2px solid var(--primary-color);
+    border-radius: 6px;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+}
